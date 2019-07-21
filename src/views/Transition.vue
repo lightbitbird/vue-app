@@ -8,26 +8,40 @@
       <p>
         <button @click="toggleBtn">On / Off</button>
         <transition appear>
-          <div v-show="show" v-bind:style="[fade, marginStyle]">Tody is fine.</div>
+          <div v-show="show" v-bind:style="[fade, marginStyle]">
+            Tody is fine.
+          </div>
         </transition>
         <transition name="rain">
-          <div v-show="show" v-bind:style="[rainy, marginStyle]">Tody is rainy.</div>
+          <div v-show="show" v-bind:style="[rainy, marginStyle]">
+            Tody is rainy.
+          </div>
         </transition>
       </p>
     </div>
     <div v-bind:style="styles">
       <p>
         <button @click="toggleBtn2">CustomClass: On / Off</button>
-        <transition enter-active-class="myEnterClass" leave-active-class="myLeaveClass">
-          <div v-show="show2" v-bind:style="[why, marginStyle]">That's why I love it.</div>
+        <transition
+          enter-active-class="myEnterClass"
+          leave-active-class="myLeaveClass"
+        >
+          <div v-show="show2" v-bind:style="[why, marginStyle]">
+            That's why I love it.
+          </div>
         </transition>
       </p>
     </div>
     <div v-bind:style="styles">
       <p>
         <button @click="toggleBtn3">AnimateCss: On / Off</button>
-        <transition enter-active-class="animated bounceIn" leave-active-class="animated bounceOut">
-          <div v-show="show3" v-bind:style="[animated, marginStyle]">Animation.</div>
+        <transition
+          enter-active-class="animated bounceIn"
+          leave-active-class="animated bounceOut"
+        >
+          <div v-show="show3" v-bind:style="[animated, marginStyle]">
+            Animation.
+          </div>
         </transition>
       </p>
     </div>
@@ -44,7 +58,9 @@
           v-on:after-leave="afterLeave"
           v-on:leave-cancelled="leaveCancelled"
         >
-          <div v-show="show4" v-bind:style="[js, marginStyle]">JS Transition.</div>
+          <div v-show="show4" v-bind:style="[js, marginStyle]">
+            JS Transition.
+          </div>
         </transition>
       </p>
     </div>
@@ -52,7 +68,9 @@
       <p>
         <button @click="toggleBtn5">Keyframes: On / Off</button>
         <transition appear name="kf">
-          <div v-show="show5" v-bind:style="[keyframes, marginStyle]">Animation KeyFrame.</div>
+          <div v-show="show5" v-bind:style="[keyframes, marginStyle]">
+            Animation KeyFrame.
+          </div>
         </transition>
       </p>
     </div>
@@ -69,51 +87,51 @@ export default {
       show4: true,
       show5: true,
       styles: {
-        textAlign: "center",
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        justifyContent: "center"
+        textAlign: 'center',
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        justifyContent: 'center',
       },
       fade: {
-        backgroundColor: "#66CCCC",
-        textAlign: "center",
-        width: "100%",
-        height: "40px"
+        backgroundColor: '#66CCCC',
+        textAlign: 'center',
+        width: '100%',
+        height: '40px',
       },
       rainy: {
-        backgroundColor: "#bdb76b",
-        textAlign: "center",
-        width: "100%",
-        height: "40px"
+        backgroundColor: '#bdb76b',
+        textAlign: 'center',
+        width: '100%',
+        height: '40px',
       },
       why: {
-        backgroundColor: "#87ceeb",
-        textAlign: "center",
-        width: "100%",
-        height: "40px"
+        backgroundColor: '#87ceeb',
+        textAlign: 'center',
+        width: '100%',
+        height: '40px',
       },
       animated: {
-        backgroundColor: "#eee8aa",
-        textAlign: "center",
-        width: "100%",
-        height: "40px"
+        backgroundColor: '#eee8aa',
+        textAlign: 'center',
+        width: '100%',
+        height: '40px',
       },
       js: {
-        backgroundColor: "#d8bfd8",
-        textAlign: "center",
-        width: "100%",
-        height: "40px"
+        backgroundColor: '#d8bfd8',
+        textAlign: 'center',
+        width: '100%',
+        height: '40px',
       },
       keyframes: {
-        backgroundColor: "#778899",
-        textAlign: "center",
-        width: "100%",
-        height: "40px"
+        backgroundColor: '#778899',
+        textAlign: 'center',
+        width: '100%',
+        height: '40px',
       },
       marginStyle: {
-        margin: "15px 0 10px"
-      }
+        margin: '15px 0 10px',
+      },
     };
   },
   methods: {
@@ -133,30 +151,30 @@ export default {
       this.show5 = !this.show5;
     },
     beforeEnter: function() {
-      console.log("before-enter");
+      console.log('before-enter');
     },
     enter: function() {
-      console.log("enter");
+      console.log('enter');
     },
     afterEnter: function() {
-      console.log("after-enter");
+      console.log('after-enter');
     },
     enterCancelled: function() {
-      console.log("enter-cancelled");
+      console.log('enter-cancelled');
     },
     beforeLeave: function() {
-      console.log("before-leave");
+      console.log('before-leave');
     },
     leave: function() {
-      console.log("leave");
+      console.log('leave');
     },
     afterLeave: function() {
-      console.log("after-leave");
+      console.log('after-leave');
     },
     leaveCancelled: function() {
-      console.log("leave-cancelled");
-    }
-  }
+      console.log('leave-cancelled');
+    },
+  },
 };
 </script>
 

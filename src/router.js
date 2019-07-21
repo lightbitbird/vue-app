@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from './views/Home.vue';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
@@ -11,7 +11,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
     },
     {
       path: '/about',
@@ -20,22 +20,27 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "about" */ './views/About.vue')
+        import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
       path: '/hello',
       name: 'hello',
-      component: () => import('./views/Hello.vue')
+      component: () => import('./views/Hello.vue'),
     },
     {
       path: '/count',
       name: 'count',
-      component: () => import('./views/Count.vue')
+      component: () => import('./views/Count.vue'),
+    },
+    {
+      path: '/component',
+      name: 'Components',
+      component: () => import('./views/Component.vue'),
     },
     {
       path: '/transition',
       name: 'Transition',
-      component: () => import('./views/Transition.vue')
-    }
-  ]
-})
+      component: () => import('./views/Transition.vue'),
+    },
+  ],
+});

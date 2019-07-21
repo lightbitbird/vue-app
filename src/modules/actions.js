@@ -1,34 +1,34 @@
 export const state = {
-  count: 0
-}
+  count: 0,
+};
 
 export const actions = {
   increment: ({ commit }) => commit('increment'),
   descrement: ({ commit }) => commit('descrement'),
-  incrementIfOdd ({ commit, state }) {
+  incrementIfOdd({ commit, state }) {
     if ((state.count + 1) % 2 === 0) {
-      commit('increment')
+      commit('increment');
     }
   },
-  incrementAsync ({ commit }) {
+  incrementAsync({ commit }) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        commit('increment')
-        resolve()
-      }, 1000)
-    })
-  }
-}
+        commit('increment');
+        resolve();
+      }, 1000);
+    });
+  },
+};
 
 export const getters = {
-  evenOrOdd: state => (state.count % 2 === 0 ? 'even' : 'odd')
-}
+  evenOrOdd: state => (state.count % 2 === 0 ? 'even' : 'odd'),
+};
 
 export const mutations = {
-  increment (state) {
-    state.count++
+  increment(state) {
+    state.count++;
   },
-  descrement (state) {
-    state.count--
-  }
-}
+  descrement(state) {
+    state.count--;
+  },
+};

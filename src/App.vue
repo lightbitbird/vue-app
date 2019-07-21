@@ -5,6 +5,7 @@
       <router-link to="/about">About</router-link>|
       <router-link to="/count">Count</router-link>|
       <router-link to="/hello">Hello</router-link>|
+      <router-link to="/component">Component</router-link>|
       <router-link to="/transition">Transition</router-link>
     </div>
     <router-view />
@@ -13,7 +14,7 @@
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
